@@ -107,12 +107,12 @@ const Modals = (props) => {
             </Row>
             <Row>
               <Col size="6">
-                <Link to="/hms-react/patient_login" className="btn btn-success">
+                <Link to="/patient_login" className="btn btn-success">
                   Patients
                 </Link>
               </Col>
               <Col size="6">
-                <Link to="/hms-react/staff_login" className="btn btn-danger">
+                <Link to="/staff_login" className="btn btn-danger">
                   Staff
                 </Link>
               </Col>
