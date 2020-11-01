@@ -17,7 +17,7 @@ const Navigation = () => {
     <div>
       <Navbar color="white" light expand="lg">
         <img alt="logo" src={logo} href="#home" className="logo"></img>
-        <NavbarBrand href="/home" className="text-decoration-none title">
+        <NavbarBrand href="/" className="text-decoration-none title">
           RAYS <span className="text-danger font-weight-bold">Hospitals</span>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
