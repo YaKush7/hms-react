@@ -3,12 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
+import { SLogin, PLogin } from "./components/Login/Loginform";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/home" component={App} />
+        <Route path="/staff_login" component={SLogin} />
+        <Route path="/patient_login" component={PLogin} />
+        <Redirect to="/home" />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

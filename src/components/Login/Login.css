@@ -1,0 +1,35 @@
+.title {
+  font-family: "Raleway", sans-serif;
+}
+
+.ctext {
+  font-family: "Varela Round", sans-serif;
+}
+
+#cust-cont {
+  margin: 10%;
+  border: 2px rgb(59, 156, 253) solid;
+  border-radius: 10px;
+}
+
+.area {
+  height: calc(100% - 80px);
+}
+
+.bg-color {
+  background-color: rgb(59, 156, 253);
+  height: 80px;
+}
+
+#sbt-button {
+  background: #1977cc;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+#sbt-button:hover {
+  background: #1c84e3;
+}

@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Carousel,
-  CarouselCaption,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselItem,
-} from "reactstrap";
+import { Carousel, CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem } from "reactstrap";
 import items from "./items";
 import "./Carou.css";
 
@@ -32,36 +26,17 @@ const Carou = () => {
 
   return (
     <Carousel activeIndex={active} next={next} previous={prev}>
-      <CarouselIndicators
-        items={items}
-        activeIndex={active}
-        onClickHandler={goto}
-      />
+      <CarouselIndicators items={items} activeIndex={active} onClickHandler={goto} />
       {items.map((item) => {
         return (
-          <CarouselItem
-            onExiting={() => settransition(true)}
-            onExited={() => settransition(false)}
-            key={item.src}
-          >
+          <CarouselItem onExiting={() => settransition(true)} onExited={() => settransition(false)} key={item.src}>
             <img src={item.src} alt={item.alt} className="cimage" />
-            <CarouselCaption
-              captionHeader={<h1>{item.head}</h1>}
-              captionText={item.text}
-            />
+            <CarouselCaption captionHeader={item.head} captionText={item.text} />
           </CarouselItem>
         );
       })}
-      <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={prev}
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={next}
-      />
+      <CarouselControl direction="prev" directionText="Previous" onClickHandler={prev} />
+      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
   );
 };
