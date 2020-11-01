@@ -17,8 +17,10 @@ const Navigation = () => {
     <div>
       <Navbar color="white" light expand="lg">
         <img alt="logo" src={logo} href="#home" className="logo"></img>
-        <NavbarBrand href="/" className="text-decoration-none title">
-          RAYS <span className="text-danger font-weight-bold">Hospitals</span>
+        <NavbarBrand className="text-decoration-none title">
+          <Link to="/">
+            RAYS <span className="text-danger font-weight-bold">Hospitals</span>
+          </Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="text-center">
