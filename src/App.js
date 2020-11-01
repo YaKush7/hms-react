@@ -6,10 +6,10 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route path="/home" component={Main} />
+        <Route path="/" component={Main} />
         <Route path="/staff_login" component={SLogin} />
         <Route path="/patient_login" component={PLogin} />
-        <Redirect to="/home" />
+        <Redirect to="/" />
       </Switch>
     </BrowserRouter>
   );
