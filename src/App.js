@@ -4,7 +4,7 @@ import { SLogin, PLogin } from "./components/Login/Loginform";
 
 const App = () => {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/staff_login" component={SLogin} />
