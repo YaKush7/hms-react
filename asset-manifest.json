@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/hms-react/static/css/main.a59f018d.chunk.css",
+    "main.js": "/hms-react/static/js/main.0c1e441c.chunk.js",
+    "main.js.map": "/hms-react/static/js/main.0c1e441c.chunk.js.map",
+    "runtime-main.js": "/hms-react/static/js/runtime-main.01205fc6.js",
+    "runtime-main.js.map": "/hms-react/static/js/runtime-main.01205fc6.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/hms-react/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.3567038e.chunk.js": "/hms-react/static/js/2.3567038e.chunk.js",
+    "static/js/2.3567038e.chunk.js.map": "/hms-react/static/js/2.3567038e.chunk.js.map",
+    "static/js/3.551e48ad.chunk.js": "/hms-react/static/js/3.551e48ad.chunk.js",
+    "static/js/3.551e48ad.chunk.js.map": "/hms-react/static/js/3.551e48ad.chunk.js.map",
+    "index.html": "/hms-react/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/hms-react/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.a59f018d.chunk.css.map": "/hms-react/static/css/main.a59f018d.chunk.css.map",
+    "static/js/2.3567038e.chunk.js.LICENSE.txt": "/hms-react/static/js/2.3567038e.chunk.js.LICENSE.txt",
+    "static/media/Aditya.9b0ba92d.jpg": "/hms-react/static/media/Aditya.9b0ba92d.jpg",
+    "static/media/Ambulance.5c298849.png": "/hms-react/static/media/Ambulance.5c298849.png",
+    "static/media/Doctors.e0e16974.png": "/hms-react/static/media/Doctors.e0e16974.png",
+    "static/media/Hospital.1a6407fa.png": "/hms-react/static/media/Hospital.1a6407fa.png",
+    "static/media/Medicines.11283043.png": "/hms-react/static/media/Medicines.11283043.png",
+    "static/media/Rishav.b8158312.jpeg": "/hms-react/static/media/Rishav.b8158312.jpeg",
+    "static/media/Saurabh.0e570865.jpeg": "/hms-react/static/media/Saurabh.0e570865.jpeg",
+    "static/media/Yash.012d197d.jpg": "/hms-react/static/media/Yash.012d197d.jpg",
+    "static/media/medical-logo.26a5bc7d.png": "/hms-react/static/media/medical-logo.26a5bc7d.png",
+    "static/media/prescription.d4e558ef.png": "/hms-react/static/media/prescription.d4e558ef.png",
+    "static/media/staff.dd3f444e.png": "/hms-react/static/media/staff.dd3f444e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01205fc6.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.3567038e.chunk.js",
+    "static/css/main.a59f018d.chunk.css",
+    "static/js/main.0c1e441c.chunk.js"
+  ]
+}
