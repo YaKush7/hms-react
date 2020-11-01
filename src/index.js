@@ -12,10 +12,10 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path="/home" component={App} />
-        <Route path="/staff_login" component={SLogin} />
-        <Route path="/patient_login" component={PLogin} />
-        <Redirect to="/home" />
+        <Route path="/hms-react/home" component={App} />
+        <Route path="/hms-react/staff_login" component={SLogin} />
+        <Route path="/hms-react/patient_login" component={PLogin} />
+        <Redirect to="/hms-react/home" />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,
