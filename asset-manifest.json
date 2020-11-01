@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hms-react/static/css/main.15a8c0e3.chunk.css",
-    "main.js": "/hms-react/static/js/main.492923e0.chunk.js",
-    "main.js.map": "/hms-react/static/js/main.492923e0.chunk.js.map",
+    "main.js": "/hms-react/static/js/main.64baefca.chunk.js",
+    "main.js.map": "/hms-react/static/js/main.64baefca.chunk.js.map",
     "runtime-main.js": "/hms-react/static/js/runtime-main.bf329928.js",
     "runtime-main.js.map": "/hms-react/static/js/runtime-main.bf329928.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/hms-react/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.6e2498ed.chunk.js": "/hms-react/static/js/2.6e2498ed.chunk.js",
-    "static/js/2.6e2498ed.chunk.js.map": "/hms-react/static/js/2.6e2498ed.chunk.js.map",
+    "static/js/2.946b6489.chunk.js": "/hms-react/static/js/2.946b6489.chunk.js",
+    "static/js/2.946b6489.chunk.js.map": "/hms-react/static/js/2.946b6489.chunk.js.map",
     "index.html": "/hms-react/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/hms-react/static/css/2.20aa2d7b.chunk.css.map",
     "static/css/main.15a8c0e3.chunk.css.map": "/hms-react/static/css/main.15a8c0e3.chunk.css.map",
-    "static/js/2.6e2498ed.chunk.js.LICENSE.txt": "/hms-react/static/js/2.6e2498ed.chunk.js.LICENSE.txt",
+    "static/js/2.946b6489.chunk.js.LICENSE.txt": "/hms-react/static/js/2.946b6489.chunk.js.LICENSE.txt",
     "static/media/Aditya.9b0ba92d.jpg": "/hms-react/static/media/Aditya.9b0ba92d.jpg",
     "static/media/Ambulance.5c298849.png": "/hms-react/static/media/Ambulance.5c298849.png",
     "static/media/Doctors.e0e16974.png": "/hms-react/static/media/Doctors.e0e16974.png",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.bf329928.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.6e2498ed.chunk.js",
+    "static/js/2.946b6489.chunk.js",
     "static/css/main.15a8c0e3.chunk.css",
-    "static/js/main.492923e0.chunk.js"
+    "static/js/main.64baefca.chunk.js"
   ]
 }
