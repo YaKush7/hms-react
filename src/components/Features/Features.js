@@ -4,27 +4,25 @@ import "./Features.css";
 
 const Features = () => {
   return (
-    <sectiion id="features">
+    <section id="features">
       <Container className="feat">
         <Row className="mb-5 mt-4">
           <Col size="12" className="text-center title pt-5">
             <h1>Features</h1>
-            <hr></hr>
+            <hr />
           </Col>
         </Row>
         <Row>
           {fitems.map((item) => {
             return (
-              <>
-                <Col xs="12" lg="4" className="px-4 pb-4">
-                  <Cardflip img={item.img} ftext={item.ftext} but={item.but} btext={item.btext} />
-                </Col>
-              </>
+              <Col xs="12" lg="4" className="px-4 pb-4" key={item.id}>
+                <Cardflip img={item.img} ftext={item.ftext} but={item.but} btext={item.btext} />
+              </Col>
             );
           })}
         </Row>
       </Container>
-    </sectiion>
+    </section>
   );
 };
 
