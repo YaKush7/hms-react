@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/hms-react/static/css/main.15a8c0e3.chunk.css",
-    "main.js": "/hms-react/static/js/main.ef9a530c.chunk.js",
-    "main.js.map": "/hms-react/static/js/main.ef9a530c.chunk.js.map",
+    "main.css": "/hms-react/static/css/main.730bcb49.chunk.css",
+    "main.js": "/hms-react/static/js/main.e5b4ad6b.chunk.js",
+    "main.js.map": "/hms-react/static/js/main.e5b4ad6b.chunk.js.map",
     "runtime-main.js": "/hms-react/static/js/runtime-main.bf329928.js",
     "runtime-main.js.map": "/hms-react/static/js/runtime-main.bf329928.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/hms-react/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.946b6489.chunk.js": "/hms-react/static/js/2.946b6489.chunk.js",
-    "static/js/2.946b6489.chunk.js.map": "/hms-react/static/js/2.946b6489.chunk.js.map",
+    "static/js/2.e853ebab.chunk.js": "/hms-react/static/js/2.e853ebab.chunk.js",
+    "static/js/2.e853ebab.chunk.js.map": "/hms-react/static/js/2.e853ebab.chunk.js.map",
     "index.html": "/hms-react/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/hms-react/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.15a8c0e3.chunk.css.map": "/hms-react/static/css/main.15a8c0e3.chunk.css.map",
-    "static/js/2.946b6489.chunk.js.LICENSE.txt": "/hms-react/static/js/2.946b6489.chunk.js.LICENSE.txt",
+    "static/css/main.730bcb49.chunk.css.map": "/hms-react/static/css/main.730bcb49.chunk.css.map",
+    "static/js/2.e853ebab.chunk.js.LICENSE.txt": "/hms-react/static/js/2.e853ebab.chunk.js.LICENSE.txt",
     "static/media/Aditya.9b0ba92d.jpg": "/hms-react/static/media/Aditya.9b0ba92d.jpg",
     "static/media/Ambulance.07dbdfda.webp": "/hms-react/static/media/Ambulance.07dbdfda.webp",
     "static/media/Doctors.17853b42.webp": "/hms-react/static/media/Doctors.17853b42.webp",
@@ -21,15 +21,18 @@
     "static/media/Rishav.b8158312.jpeg": "/hms-react/static/media/Rishav.b8158312.jpeg",
     "static/media/Saurabh.0e570865.jpeg": "/hms-react/static/media/Saurabh.0e570865.jpeg",
     "static/media/Yash.012d197d.jpg": "/hms-react/static/media/Yash.012d197d.jpg",
+    "static/media/amb.22cf8dc3.png": "/hms-react/static/media/amb.22cf8dc3.png",
+    "static/media/login.9fc63e4f.png": "/hms-react/static/media/login.9fc63e4f.png",
     "static/media/medical-logo.26a5bc7d.png": "/hms-react/static/media/medical-logo.26a5bc7d.png",
+    "static/media/phar.0c92043e.png": "/hms-react/static/media/phar.0c92043e.png",
     "static/media/prescription.20eae949.webp": "/hms-react/static/media/prescription.20eae949.webp",
     "static/media/staff.c96eacb4.webp": "/hms-react/static/media/staff.c96eacb4.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.bf329928.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.946b6489.chunk.js",
-    "static/css/main.15a8c0e3.chunk.css",
-    "static/js/main.ef9a530c.chunk.js"
+    "static/js/2.e853ebab.chunk.js",
+    "static/css/main.730bcb49.chunk.css",
+    "static/js/main.e5b4ad6b.chunk.js"
   ]
 }
