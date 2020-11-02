@@ -30,7 +30,7 @@ const fitems = [
         {"Click Here"}
       </Button>
     ),
-    btext: "Buy any medicine or drug from our trusted suppliers online.",
+    btext: "Buy prescribed medicines from our trusted suppliers online.",
   },
 ];
 

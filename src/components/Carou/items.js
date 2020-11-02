@@ -3,6 +3,8 @@ import i2 from "./images/Doctors.webp";
 import i3 from "./images/Ambulance.webp";
 import i4 from "./images/Medicines.webp";
 import i5 from "./images/prescription.webp";
+
+import Modals from "../Modals/Modals";
 import { Button } from "reactstrap";
 
 const items = [
@@ -15,12 +17,8 @@ const items = [
   {
     src: i2,
     alt: "doctors",
-    head: "Doctor's Login Portal",
-    text: (
-      <Button color="primary" className="mt-2">
-        Coming Soon!
-      </Button>
-    ),
+    head: "Staff/Patient Login Portal",
+    text: <Modals buttonLabel="Click Here!" boutline={false} bcolor="primary" cname="mt-2" />,
   },
   {
     src: i3,

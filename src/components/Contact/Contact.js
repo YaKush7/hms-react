@@ -86,14 +86,14 @@ const CInfo = () => {
           <FontAwesomeIcon icon={["fas", "envelope"]} />
         </i>
         <h4 className="title font-weight-bold">Email:</h4>
-        <p className="ctext">adiusingh127@gmail.com</p>
+        <p className="ctext">contact.us@rays.med</p>
       </div>
       <div className="item">
         <i>
           <FontAwesomeIcon icon={["fas", "phone-alt"]} />
         </i>
         <h4 className="title font-weight-bold">Call:</h4>
-        <p className="ctext">+91-8941847380</p>
+        <p className="ctext">+91 XXX XXX XXXX</p>
       </div>
     </div>
   );
