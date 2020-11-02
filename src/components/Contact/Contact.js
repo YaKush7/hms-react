@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact">
       <Container>
         <Row>
-          <Col size="12" className="text-center title py-5">
+          <Col size="12" className="text-center title mb-5 mt-4">
             <h1>Contact Us</h1>
             <hr></hr>
           </Col>

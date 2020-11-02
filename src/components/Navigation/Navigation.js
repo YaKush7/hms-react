@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Button, Modal, ModalHeader, ModalBody, Container, Row, Col } from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../assets/medical-logo.png";
+
+import Modals from "../Modals/Modals";
+import logo from "./medical-logo.png";
 import "./Navigation.css";
 
-import staff from "./images/staff.webp";
-import patient from "./images/Patients.webp";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
@@ -70,7 +70,7 @@ const Menu = (props) => {
 const Menu2 = () => {
   return (
     <>
-      <Modals buttonLabel="Login" />
+      <Modals buttonLabel="Login" boutline={true} bcolor="secondary" />
       <NavItem>
         <NavLink href="#social" id="mitem">
           <FontAwesomeIcon icon={["fab", "facebook-f"]} size="1x" />
@@ -82,46 +82,5 @@ const Menu2 = () => {
         </NavLink>
       </NavItem>
     </>
-  );
-};
-
-const Modals = (props) => {
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
-
-  return (
-    <div>
-      <Button outline color="secondary" onClick={toggle}>
-        {props.buttonLabel}
-      </Button>
-      <Modal isOpen={modal} toggle={toggle} className="title" centered>
-        <ModalHeader toggle={toggle}>Choose the login type</ModalHeader>
-        <ModalBody>
-          <Container className="text-center">
-            <Row>
-              <Col size="6">
-                <img src={patient} alt="patients" className="m-img" />
-              </Col>
-              <Col size="6">
-                <img src={staff} alt="patients" className="m-img" />
-              </Col>
-            </Row>
-            <Row>
-              <Col size="6">
-                <Link to="/patient_login" className="btn btn-success">
-                  Patients
-                </Link>
-              </Col>
-              <Col size="6">
-                <Link to="/staff_login" className="btn btn-danger">
-                  Staff
-                </Link>
-              </Col>
-            </Row>
-          </Container>
-        </ModalBody>
-      </Modal>
-    </div>
   );
 };

@@ -1,5 +1,6 @@
 import Navigation from "./Navigation/Navigation";
 import Carou from "./Carou/Carou";
+import Features from "./Features/Features";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
@@ -14,6 +15,7 @@ function Main() {
     <div>
       <Navigation />
       <Carou />
+      <Features />
       <About />
       <Contact />
       <Footer />

@@ -11,7 +11,7 @@ const About = () => {
     <section id="about">
       <Container>
         <Row>
-          <Col size="12" className="text-center title pt-5">
+          <Col size="12" className="text-center title pt-4">
             <h1>About Us</h1>
             <hr></hr>
           </Col>
