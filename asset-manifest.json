@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hms-react/static/css/main.15a8c0e3.chunk.css",
-    "main.js": "/hms-react/static/js/main.64baefca.chunk.js",
-    "main.js.map": "/hms-react/static/js/main.64baefca.chunk.js.map",
+    "main.js": "/hms-react/static/js/main.ef9a530c.chunk.js",
+    "main.js.map": "/hms-react/static/js/main.ef9a530c.chunk.js.map",
     "runtime-main.js": "/hms-react/static/js/runtime-main.bf329928.js",
     "runtime-main.js.map": "/hms-react/static/js/runtime-main.bf329928.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/hms-react/static/css/2.20aa2d7b.chunk.css",
@@ -13,22 +13,23 @@
     "static/css/main.15a8c0e3.chunk.css.map": "/hms-react/static/css/main.15a8c0e3.chunk.css.map",
     "static/js/2.946b6489.chunk.js.LICENSE.txt": "/hms-react/static/js/2.946b6489.chunk.js.LICENSE.txt",
     "static/media/Aditya.9b0ba92d.jpg": "/hms-react/static/media/Aditya.9b0ba92d.jpg",
-    "static/media/Ambulance.5c298849.png": "/hms-react/static/media/Ambulance.5c298849.png",
-    "static/media/Doctors.e0e16974.png": "/hms-react/static/media/Doctors.e0e16974.png",
-    "static/media/Hospital.1a6407fa.png": "/hms-react/static/media/Hospital.1a6407fa.png",
-    "static/media/Medicines.11283043.png": "/hms-react/static/media/Medicines.11283043.png",
+    "static/media/Ambulance.07dbdfda.webp": "/hms-react/static/media/Ambulance.07dbdfda.webp",
+    "static/media/Doctors.17853b42.webp": "/hms-react/static/media/Doctors.17853b42.webp",
+    "static/media/Hospital.97afabd0.webp": "/hms-react/static/media/Hospital.97afabd0.webp",
+    "static/media/Medicines.1ae0233a.webp": "/hms-react/static/media/Medicines.1ae0233a.webp",
+    "static/media/Patients.0b6f242a.webp": "/hms-react/static/media/Patients.0b6f242a.webp",
     "static/media/Rishav.b8158312.jpeg": "/hms-react/static/media/Rishav.b8158312.jpeg",
     "static/media/Saurabh.0e570865.jpeg": "/hms-react/static/media/Saurabh.0e570865.jpeg",
     "static/media/Yash.012d197d.jpg": "/hms-react/static/media/Yash.012d197d.jpg",
     "static/media/medical-logo.26a5bc7d.png": "/hms-react/static/media/medical-logo.26a5bc7d.png",
-    "static/media/prescription.d4e558ef.png": "/hms-react/static/media/prescription.d4e558ef.png",
-    "static/media/staff.dd3f444e.png": "/hms-react/static/media/staff.dd3f444e.png"
+    "static/media/prescription.20eae949.webp": "/hms-react/static/media/prescription.20eae949.webp",
+    "static/media/staff.c96eacb4.webp": "/hms-react/static/media/staff.c96eacb4.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.bf329928.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.946b6489.chunk.js",
     "static/css/main.15a8c0e3.chunk.css",
-    "static/js/main.64baefca.chunk.js"
+    "static/js/main.ef9a530c.chunk.js"
   ]
 }
