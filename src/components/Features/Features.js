@@ -1,4 +1,4 @@
-import { Container, Row, Col, CardBody, CardTitle, Card, CardImg, Button } from "reactstrap";
+import { Container, Row, Col, CardBody, CardTitle, Card, CardImg } from "reactstrap";
 import fitems from "./fitems";
 import "./Features.css";
 
