@@ -29,19 +29,11 @@
         margin: auto;
       }
       .divLoader {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 95vh;
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
       }
     </style>
     <title>RAYS Hospitals</title>
@@ -50,9 +42,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="divLoader">
-        <svg class="svgLoader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="210px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="display: block; background-repeat-y: initial; background-repeat-x: initial; background-color: rgb(255, 255, 255)">
-          <path d="M5 50A45 45 0 0 0 95 50A45 47.9 0 0 1 5 50" fill="#e15b64" stroke="none" transform="matrix(1,0,0,1,0,0)" style="transform: matrix(1, 0, 0, 1, 0, 0); animation-play-state: paused"></path>
-        </svg>
+        <img src="%PUBLIC_URL%/loader.svg" alt="loader" />
       </div>
     </div>
     <!--
@@ -60,6 +50,15 @@
       <svg class="svgLoader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="210px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="display: block; background-repeat-y: initial; background-repeat-x: initial; background-color: rgb(255, 255, 255); animation-play-state: paused">
           <path d="M5 50A45 45 0 0 0 95 50A45 47.9 0 0 1 5 50" fill="#e15b64" stroke="none" transform="matrix(1,0,0,1,0,0)" style="transform: matrix(1, 0, 0, 1, 0, 0); animation-play-state: paused"></path>
         </svg>
+
+        @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
 
 
       This HTML file is a template.

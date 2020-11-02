@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../assets/medical-logo.png";
 import "./Navigation.css";
 
-import staff from "./images/staff.png";
-import patient from "./images/Patients.png";
+import staff from "./images/staff.webp";
+import patient from "./images/Patients.webp";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {

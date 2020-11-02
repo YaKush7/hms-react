@@ -1,8 +1,8 @@
-import i1 from "./images/Hospital.png";
-import i2 from "./images/Doctors.png";
-import i3 from "./images/Ambulance.png";
-import i4 from "./images/Medicines.png";
-import i5 from "./images/prescription.png";
+import i1 from "./images/Hospital.webp";
+import i2 from "./images/Doctors.webp";
+import i3 from "./images/Ambulance.webp";
+import i4 from "./images/Medicines.webp";
+import i5 from "./images/prescription.webp";
 import { Button } from "reactstrap";
 
 const items = [
