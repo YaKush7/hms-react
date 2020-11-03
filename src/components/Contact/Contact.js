@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import { Button, Col, Container, Form, FormGroup, Input, Row } from "reactstrap";
 import "./Contact.css";
 
@@ -32,45 +33,6 @@ export default Contact;
 
 //helper;
 
-const CForm = () => {
-  return (
-    <Form action="forms/contact.php" method="post" className="php-email-form">
-      <Row form>
-        <Col md="6">
-          <FormGroup>
-            <Input required type="text" className="inp" name="name" id="name" placeholder="Your Name" />
-            <div className="validate"></div>
-          </FormGroup>
-        </Col>
-        <Col md="6">
-          <FormGroup>
-            <Input required type="email" className="inp" name="email" id="email" placeholder="Your Email" />
-            <div className="validate"></div>
-          </FormGroup>
-        </Col>
-      </Row>
-      <FormGroup>
-        <Input required type="text" className="inp" name="subject" id="subject" placeholder="Subject" />
-        <div className="validate"></div>
-      </FormGroup>
-      <FormGroup>
-        <Input required type="textarea" className="tarea" name="message" rows="5" placeholder="Message" />
-        <div className="validate"></div>
-      </FormGroup>
-      <div className="mb-3">
-        <div className="loading">Loading</div>
-        <div className="error-message"></div>
-        <div className="sent-message">Your message has been sent. Thank you!</div>
-      </div>
-      <div className="text-center">
-        <Button type="submit" id="sbt-button" className="ctext">
-          Send Message
-        </Button>
-      </div>
-    </Form>
-  );
-};
-
 const CInfo = () => {
   return (
     <div className="info">
@@ -96,5 +58,60 @@ const CInfo = () => {
         <p className="ctext">+91 XXX XXX XXXX</p>
       </div>
     </div>
+  );
+};
+
+const CForm = () => {
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    msg: "",
+    sub: "",
+  });
+
+  const handle_change = (props) => {
+    setState((prevState) => ({ ...prevState, [props.target.name]: props.target.value }));
+  };
+
+  const handle_submit = (props) => {
+    props.preventDefault();
+    console.log(state);
+  };
+
+  return (
+    <Form onSubmit={handle_submit} method="post" className="php-email-form">
+      <Row form>
+        <Col md="6">
+          <FormGroup>
+            <Input required type="text" className="inp" name="name" id="name" placeholder="Your Name" value={state.name} onChange={handle_change} />
+            <div className="validate"></div>
+          </FormGroup>
+        </Col>
+        <Col md="6">
+          <FormGroup>
+            <Input required type="email" className="inp" name="email" id="email" placeholder="Your Email" value={state.email} onChange={handle_change} />
+            <div className="validate"></div>
+          </FormGroup>
+        </Col>
+      </Row>
+      <FormGroup>
+        <Input required type="text" className="inp" name="sub" id="subject" placeholder="Subject" value={state.sub} onChange={handle_change} />
+        <div className="validate"></div>
+      </FormGroup>
+      <FormGroup>
+        <Input required type="textarea" className="tarea" name="msg" rows="5" placeholder="Message" value={state.msg} onChange={handle_change} />
+        <div className="validate"></div>
+      </FormGroup>
+      <div className="mb-3">
+        <div className="loading">Loading</div>
+        <div className="error-message"></div>
+        <div className="sent-message">Your message has been sent. Thank you!</div>
+      </div>
+      <div className="text-center">
+        <Button type="submit" id="sbt-button" className="ctext">
+          Send Message
+        </Button>
+      </div>
+    </Form>
   );
 };
