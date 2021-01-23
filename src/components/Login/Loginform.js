@@ -1,6 +1,6 @@
 import { Card, CardBody } from "reactstrap";
 import { SLForm, PLForm } from "./Login";
-import "./Login.css";
+import "./Forms.css";
 
 const SLogin = () => {
   return (
