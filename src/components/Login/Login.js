@@ -1,17 +1,7 @@
-import axios from "axios";
 import { useState } from "react";
 import { Staff, Patient } from "./Forms";
+import { login } from "./Auth/Auth";
 import "./Forms.css";
-
-const login = (API_URL, send) => {
-  return axios.post(API_URL, send).then((response) => {
-    if (response.data.accessToken) {
-      localStorage.setItem("user", JSON.stringify(response.data));
-      console.log(response.data);
-    }
-    return response.data;
-  });
-};
 
 //helper
 
@@ -48,12 +38,11 @@ const PLForm = () => {
     props.preventDefault();
     console.log(state);
 
-    const API_URL = "http://localhost:8080/api/auth/signin";
     const send = {
       id: state.p_id,
       password: state.p_pass,
     };
-    login(API_URL, send).then(
+    login(send).then(
       () => {
         console.log("go ahead");
       },
