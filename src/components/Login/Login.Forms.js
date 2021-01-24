@@ -1,4 +1,4 @@
-import { Button, Col, Form, FormGroup, Input, Label } from "reactstrap";
+import { Alert, Button, Col, Form, FormGroup, Input, Label } from "reactstrap";
 import "./Forms.css";
 
 const Staff = (props) => {
@@ -58,8 +58,19 @@ const Staff = (props) => {
 };
 
 const Patient = (props) => {
+  var check;
+  if (props.msg === "") check = true;
+  else check = false;
+
   return (
     <>
+      {check ? (
+        <></>
+      ) : (
+        <Alert id="alert" color="danger">
+          {props.msg}
+        </Alert>
+      )}
       <Form className="pt-4" method="post" onSubmit={props.handle_submit}>
         <FormGroup row>
           <Label for="p_id" sm={{ size: 2, offset: 1 }}>

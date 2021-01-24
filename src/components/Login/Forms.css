@@ -12,6 +12,12 @@
   border-radius: 10px;
 }
 
+#alert {
+  margin: 2% 5% 2% 5%;
+  border: 2px rgb(255, 129, 129) solid;
+  border-radius: 10px;
+}
+
 .area {
   height: calc(100% - 80px);
 }

@@ -1,59 +1,35 @@
-import { useState } from "react";
-import { Staff, Patient } from "./Forms";
-import { login } from "./Auth/Auth";
+import { Card, CardBody } from "reactstrap";
+import { SLForm, PLForm } from "./Login.helper";
 import "./Forms.css";
 
-//helper
-
-const SLForm = () => {
-  const [state, setState] = useState({
-    s_id: "",
-    s_pass: "",
-    role: "rep",
-  });
-
-  const handle_change = (props) => {
-    setState((prevState) => ({ ...prevState, [props.target.name]: props.target.value }));
-  };
-
-  const handle_submit = (props) => {
-    props.preventDefault();
-    console.log(state);
-  };
-
-  return <Staff state={state} handle_change={handle_change} handle_submit={handle_submit} />;
+const SLogin = () => {
+  return (
+    <div className="ctext">
+      <div className="title_bar text-center bg-color text-white p-3 h1">Staff Login</div>
+      <div className="area">
+        <Card id="cust-cont">
+          <CardBody>
+            <SLForm />
+          </CardBody>
+        </Card>
+      </div>
+    </div>
+  );
 };
 
-const PLForm = () => {
-  const [state, setState] = useState({
-    p_id: "",
-    p_pass: "",
-  });
-
-  const handle_change = (props) => {
-    setState((prevState) => ({ ...prevState, [props.target.name]: props.target.value }));
-  };
-
-  const handle_submit = (props) => {
-    props.preventDefault();
-    console.log(state);
-
-    const send = {
-      id: state.p_id,
-      password: state.p_pass,
-    };
-    login(send).then(
-      () => {
-        console.log("go ahead");
-      },
-      (err) => {
-        const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();
-        console.log(errmsg);
-      }
-    );
-  };
-
-  return <Patient state={state} handle_change={handle_change} handle_submit={handle_submit} />;
+const PLogin = () => {
+  return (
+    <div className="ctext">
+      <div className="title_bar text-center bg-color text-white p-3 h1">Patient Login</div>
+      <div className="area">
+        <Card id="cust-cont">
+          <CardBody>
+            <PLForm />
+          </CardBody>
+        </Card>
+      </div>
+    </div>
+  );
 };
 
-export { SLForm, PLForm };
+export { SLogin, PLogin };

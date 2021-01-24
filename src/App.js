@@ -1,15 +1,17 @@
-import Main from "./components/Main";
-import { Switch, Route, Redirect, HashRouter, BrowserRouter } from "react-router-dom";
-import { SLogin, PLogin } from "./components/Login/Loginform";
+import Home from "./components/Home/Home";
+import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
+import { SLogin, PLogin } from "./components/Login/Login";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Main} />
+        <Route exact path="/home" component={Home} />
         <Route path="/staff_login" component={SLogin} />
         <Route path="/patient_login" component={PLogin} />
-        <Redirect exact to="/" />
+        <Route path="/patient_dashboard" component={Dashboard} />
+        <Redirect exact to="/home" />
       </Switch>
     </BrowserRouter>
   );
