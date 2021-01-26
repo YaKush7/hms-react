@@ -50,7 +50,6 @@ const PLForm = () => {
     login(send).then(
       () => {
         history.push("/patient_dashboard");
-        window.location.reload();
       },
       (err) => {
         const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();

@@ -24,9 +24,13 @@ const Dashboard = () => {
     return <Redirect to="/patient_login" />;
   }
 
+  if (state.status === -1) {
+    return <>{state.msg}</>;
+  }
+
   return (
     <div id="root">
-      <div class="divLoader">
+      <div className="divLoader">
         <img src={loader} alt="loader" />
       </div>
     </div>

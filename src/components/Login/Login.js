@@ -29,13 +29,13 @@ const Login = () => {
   }
 
   if (state.status === 200) {
-    console.log("something");
+    console.log("Redirecting");
     return <Redirect to="/patient_dashboard" />;
   }
 
   return (
     <div id="root">
-      <div class="divLoader">
+      <div className="divLoader">
         <img src={loader} alt="loader" />
       </div>
     </div>
