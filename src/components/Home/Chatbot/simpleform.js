@@ -70,7 +70,7 @@ class SimpleForm extends Component {
             {
               id: 'age',
               user: true,
-              trigger: '7',
+              trigger: '6',
               validator: (value) => {
                 if (isNaN(value)) {
                   return 'value must be a number';
@@ -83,6 +83,25 @@ class SimpleForm extends Component {
                 return true;
               },
             },
+            {
+              id: '6',
+              message: 'What is you contact number?',
+              trigger: 'phone',
+            },
+            {
+              id: 'phone',
+              user: true,
+              trigger: '7',
+              validator: (value) => {
+                if (isNaN(value)) {
+                  return 'value must be a number';
+                } else if (value < 999999999 ) {
+                  return 'Enter a Valid Phone Number';
+                }
+  
+                return true;
+            },
+          },
             {
               id: '7',
               message: 'Great! Check out your summary',
@@ -117,6 +136,7 @@ class SimpleForm extends Component {
                 { value: 'name', label: 'Name', trigger: 'update-name' },
                 { value: 'gender', label: 'Gender', trigger: 'update-gender' },
                 { value: 'age', label: 'Age', trigger: 'update-age' },
+                { value: 'phone', label: 'Contact', trigger: 'update-phone' },
               ],
             },
             {
@@ -135,8 +155,14 @@ class SimpleForm extends Component {
               trigger: '7',
             },
             {
+              id: 'update-phone',
+              update: 'phone',
+              trigger: '7',
+            },
+
+            {
               id: 'end-message',
-              message: 'Thanks! Your data was submitted successfully!',
+              message: 'Thanks! Your request has been saved. We will contact you soon!',
               end: true,
             },
           ]}

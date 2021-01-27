@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const Review = (props)  => {
-  const [state, setState] = useState({ name: '', gender: '', age: ''});
+  const [state, setState] = useState({ name: '', gender: '', age: '', phone: ''});
   
   useEffect(() => {
     const { steps } = props;
-    const { name, gender, age } = steps;
-    setState({ name, gender, age });
+    const { name, gender, age, phone } = steps;
+    setState({ name, gender, age, phone });
   }, [props])
 
-    const { name, gender, age } = state;
+    const { name, gender, age, phone } = state;
     return (
       <div style={{ width: '100%' }}>
         <h3>Summary</h3>
@@ -27,6 +27,10 @@ const Review = (props)  => {
             <tr>
               <td>Age</td>
               <td>{age.value}</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>{phone.value}</td>
             </tr>
           </tbody>
         </table>
