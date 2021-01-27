@@ -18,7 +18,7 @@ const Navigation = () => {
       <Navbar color="white" light expand="lg">
         <img alt="logo" src={logo} href="#home" className="logo"></img>
         <NavbarBrand className="text-decoration-none title">
-          <Link className='noUnderline' to="/">
+          <Link className="noUnderline" to="/">
             RAYS <span className="text-danger font-weight-bold">Hospitals</span>
           </Link>
         </NavbarBrand>

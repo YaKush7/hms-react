@@ -13,16 +13,14 @@
 }
 
 #alert {
-  margin : 2% auto;
+  margin: 2% auto;
   width: 200px;
   font-size: medium;
   text-align: center;
   border: 2px rgb(255, 129, 129) solid;
   border-radius: 10px;
   opacity: 80%;
-
 }
-
 
 .area {
   height: calc(100% - 80px);
@@ -46,6 +44,6 @@
   background: #1c84e3;
 }
 
-.noUnderline:hover{
-  text-decoration: none; 
+.noUnderline:hover {
+  text-decoration: none;
 }
