@@ -1,9 +1,12 @@
-import { Alert, Button, Col, Form, FormGroup, Input, Label } from "reactstrap";
+import { Alert, Button, Col, Form, FormGroup, Input, Label, Card, CardBody } from "reactstrap";
 import "./Forms.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Staff = (props) => {
   return (
     <>
+    <Card id="cust-cont">
+      <CardBody>
       <Form className="pt-4" method="post" onSubmit={props.handle_submit}>
         <FormGroup row>
           <Label for="s_id" sm={{ size: 2, offset: 1 }}>
@@ -53,6 +56,8 @@ const Staff = (props) => {
           </Col>
         </FormGroup>
       </Form>
+      </CardBody>
+      </Card>
     </>
   );
 };
@@ -64,13 +69,8 @@ const Patient = (props) => {
 
   return (
     <>
-      {check ? (
-        <></>
-      ) : (
-        <Alert id="alert" color="danger">
-          {props.msg}
-        </Alert>
-      )}
+      <Card id="cust-cont">
+      <CardBody>  
       <Form className="pt-4" method="post" onSubmit={props.handle_submit}>
         <FormGroup row>
           <Label for="p_id" sm={{ size: 2, offset: 1 }}>
@@ -95,7 +95,17 @@ const Patient = (props) => {
             </Button>
           </Col>
         </FormGroup>
-      </Form>
+      </Form>   
+      </CardBody>
+      </Card>
+      {check ? (
+        <></>
+      ) : (
+        <Alert id="alert" color="danger">
+          <FontAwesomeIcon icon={['fas', 'exclamation-triangle']} />
+          {` ${props.msg}`}
+        </Alert>
+      )}
     </>
   );
 };

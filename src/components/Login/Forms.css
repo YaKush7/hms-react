@@ -7,16 +7,22 @@
 }
 
 #cust-cont {
-  margin: 10%;
+  margin: 10% 10% 0% 10%;
   border: 2px rgb(59, 156, 253) solid;
   border-radius: 10px;
 }
 
 #alert {
-  margin: 2% 5% 2% 5%;
+  margin : 2% auto;
+  width: 200px;
+  font-size: medium;
+  text-align: center;
   border: 2px rgb(255, 129, 129) solid;
   border-radius: 10px;
+  opacity: 80%;
+
 }
+
 
 .area {
   height: calc(100% - 80px);
@@ -38,4 +44,8 @@
 
 #sbt-button:hover {
   background: #1c84e3;
+}
+
+.noUnderline:hover{
+  text-decoration: none; 
 }
