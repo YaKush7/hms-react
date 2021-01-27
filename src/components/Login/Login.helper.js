@@ -10,7 +10,7 @@ const SLForm = () => {
   const [state, setState] = useState({
     s_id: "",
     s_pass: "",
-    role: "rep",
+    role: "reception",
   });
 
   const handle_change = (props) => {
@@ -46,6 +46,7 @@ const PLForm = () => {
     const send = {
       id: state.p_id,
       password: state.p_pass,
+      role: "patient",
     };
     login(send).then(
       () => {

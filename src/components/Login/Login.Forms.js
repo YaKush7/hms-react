@@ -32,17 +32,17 @@ const Staff = (props) => {
                 <Col sm="8">
                   <FormGroup check>
                     <Label check>
-                      <Input type="radio" name="role" id="doctor" value="doc" onChange={props.handle_change} /> Doctor
+                      <Input type="radio" name="role" id="doctor" value="doctor" onChange={props.handle_change} /> Doctor
                     </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="radio" name="role" id="reception" value="rep" defaultChecked onChange={props.handle_change} /> Receptionist
+                      <Input type="radio" name="role" id="reception" value="receotion" defaultChecked onChange={props.handle_change} /> Receptionist
                     </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="radio" name="role" id="admin" value="adm" onChange={props.handle_change} /> Admin
+                      <Input type="radio" name="role" id="admin" value="admin" onChange={props.handle_change} /> Admin
                     </Label>
                   </FormGroup>
                 </Col>

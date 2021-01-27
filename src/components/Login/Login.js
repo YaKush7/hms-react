@@ -15,7 +15,7 @@ const Login = () => {
 
   useEffect(() => {
     verifyUser().then((rep) => {
-      setState({ msg: rep.data, status: rep.status });
+      setState({ msg: rep.data.msg, status: rep.status });
     });
   }, []);
 
@@ -31,6 +31,10 @@ const Login = () => {
   if (state.status === 200) {
     console.log("Redirecting");
     return <Redirect to="/patient_dashboard" />;
+  }
+
+  if (state.status === -1) {
+    return <>{state.msg}</>;
   }
 
   return (
