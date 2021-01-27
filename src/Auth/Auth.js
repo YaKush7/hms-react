@@ -45,7 +45,6 @@ const verifyUser = () => {
       if (err.response) {
         return { data: { msg: err.response.data.msg }, status: err.response.status };
       } else {
-        console.log("hi");
         return { data: { msg: "Connection Error" }, status: -1 };
       }
     });
