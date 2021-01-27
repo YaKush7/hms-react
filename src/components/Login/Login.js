@@ -3,7 +3,7 @@ import "./Forms.css";
 import { useEffect, useState } from "react";
 import { verifyUser } from "../../Auth/Auth";
 import { Redirect, Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import loader from "../../assets/loader.svg";
 
@@ -46,9 +46,11 @@ const SLogin = () => {
   return (
     <div className="ctext">
       <div className="title_bar text-center bg-color text-white p-3 h1">Staff Login</div>
-      <Link className="p-3 noUnderline" to="/home"><FontAwesomeIcon icon={['fas', 'arrow-circle-left']} /> Back To Home </Link>
+      <Link className="p-3 noUnderline" to="/home">
+        <FontAwesomeIcon icon={["fas", "arrow-circle-left"]} /> Back To Home{" "}
+      </Link>
       <div className="area">
-            <SLForm />
+        <SLForm />
       </div>
     </div>
   );
@@ -58,12 +60,15 @@ const PLogin = () => {
   return (
     <div className="ctext">
       <div className="title_bar text-center bg-color text-white p-3 h1">Patient Login</div>
-      <Link className="p-3 noUnderline" to="/home"><FontAwesomeIcon icon={['fas', 'arrow-circle-left']} /> Back To Home </Link>
+      <Link className="p-3 noUnderline" to="/home">
+        <FontAwesomeIcon icon={["fas", "arrow-circle-left"]} /> Back To Home{" "}
+      </Link>
       <div className="area">
-            <PLForm />
+        <PLForm />
       </div>
     </div>
   );
 };
 
-export default Login;
+//export default Login;
+export { Login, SLogin };
