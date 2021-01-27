@@ -28,7 +28,7 @@ const register = (send) => {
 const getHeader = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   if (user && user.accessToken) {
-    return { "x-access-token": user.accessToken };
+    return { "x-access-token": user.accessToken, role: user.role };
   } else {
     return {};
   }
@@ -38,14 +38,15 @@ const verifyUser = () => {
   return axios
     .get(API_TEST_URL + "user", { headers: getHeader() })
     .then((response) => {
+      console.log(response);
       return response;
     })
     .catch((err) => {
       if (err.response) {
-        return { data: err.response.data.msg, status: err.response.status };
+        return { data: { msg: err.response.data.msg }, status: err.response.status };
       } else {
         console.log("hi");
-        return { data: "Connection Error", status: -1 };
+        return { data: { msg: "Connection Error" }, status: -1 };
       }
     });
 };

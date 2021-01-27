@@ -7,16 +7,18 @@ const Dashboard = () => {
   const [state, setState] = useState({
     msg: "",
     status: null,
+    uid: null,
+    urole: null,
   });
 
   useEffect(() => {
-    verifyUser().then((rep) => {
-      setState({ msg: rep.data, status: rep.status });
+    verifyUser().then((response) => {
+      setState({ uid: response.data.uid, urole: response.data.urole, msg: response.data.msg, status: response.status });
     });
   }, []);
 
   if (state.status === 200) {
-    return <>Logged in : {state.msg}</>;
+    return <>Logged in : {JSON.stringify(state, null, 2)}</>;
   }
 
   if (state.status === 401 || state.status === 403) {
