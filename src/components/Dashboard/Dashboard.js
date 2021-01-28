@@ -23,7 +23,7 @@ const Dashboard = (props) => {
     } else {
       setState({ status: 401 });
     }
-  }, []);
+  }, [props]);
 
   if (state.status === 200) {
     return (

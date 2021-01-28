@@ -23,7 +23,7 @@ const Login = (props) => {
     } else {
       setState({ status: 401 });
     }
-  }, []);
+  }, [props]);
 
   if (state.status === 401 || state.status === 403) {
     if (props.loc === "staff") {
