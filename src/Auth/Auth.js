@@ -50,4 +50,4 @@ const verifyUser = () => {
     });
 };
 
-export { login, logout, register, verifyUser };
+export { login, logout, register, verifyUser, getHeader };
