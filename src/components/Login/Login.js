@@ -14,9 +14,15 @@ const Login = (props) => {
   });
 
   useEffect(() => {
-    verifyUser().then((rep) => {
-      setState({ msg: rep.data.msg, status: rep.status });
-    });
+    const temp = getHeader().role;
+    console.log(temp, props.loc);
+    if ((props.loc === "staff" && (temp === "admin" || temp === "reception" || temp === "doctor")) || props.loc === temp) {
+      verifyUser({ ...props }).then((rep) => {
+        setState({ msg: rep.data.msg, status: rep.status });
+      });
+    } else {
+      setState({ status: 401 });
+    }
   }, []);
 
   if (state.status === 401 || state.status === 403) {
@@ -29,10 +35,8 @@ const Login = (props) => {
 
   if (state.status === 200) {
     console.log("Redirecting");
-    const temp = getHeader().role;
-    if (props.loc === "staff" && (temp === "admin" || temp === "reception" || temp === "doctor")) return <Redirect to="/staff_dashboard" />;
-    else if (props.loc === "patient" && temp === "patient") return <Redirect to="/patient_dashboard" />;
-    else return <Redirect to="/404_not_found" />;
+    if (props.loc === "staff") return <Redirect to="/staff_dashboard" />;
+    else return <Redirect to="/patient_dashboard" />;
   }
 
   if (state.status === -1) {
@@ -76,5 +80,4 @@ const PLogin = () => {
   );
 };
 
-//export default Login;
-export { Login, SLogin };
+export default Login;
