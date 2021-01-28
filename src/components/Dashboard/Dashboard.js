@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
-import { verifyUser } from "../../Auth/Auth";
+import { getHeader, verifyUser } from "../../Auth/Auth";
 import loader from "../../assets/loader.svg";
 
 const Dashboard = () => {
@@ -9,16 +9,25 @@ const Dashboard = () => {
     status: null,
     uid: null,
     urole: null,
+    data: null,
   });
 
   useEffect(() => {
     verifyUser().then((response) => {
-      setState({ uid: response.data.uid, urole: response.data.urole, msg: response.data.msg, status: response.status });
+      if (getHeader().role === "patient") setState({ uid: response.data.uid, urole: response.data.urole, msg: response.data.msg, status: response.status, data: response.data.data._doc });
+      else setState({ status: 401 });
     });
   }, []);
 
   if (state.status === 200) {
-    return <>Logged in : {JSON.stringify(state, null, 2)}</>;
+    return (
+      <>
+        Logged in : {JSON.stringify(state, null, 1)}
+        <br />
+        <br />
+        DATA : {JSON.stringify(state.data, null, 2)}
+      </>
+    );
   }
 
   if (state.status === 401 || state.status === 403) {
