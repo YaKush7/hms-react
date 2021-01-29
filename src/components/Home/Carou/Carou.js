@@ -25,6 +25,7 @@ const Carou = () => {
   };
 
   return (
+    <section id="home">
     <Carousel activeIndex={active} next={next} previous={prev}>
       <CarouselIndicators items={items} activeIndex={active} onClickHandler={goto} />
       {items.map((item) => {
@@ -38,6 +39,7 @@ const Carou = () => {
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={prev} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
+    </section>
   );
 };
 

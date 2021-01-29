@@ -56,7 +56,7 @@ const SLogin = () => {
   return (
     <div className="ctext">
       <div className="title_bar text-center bg-color text-white p-3 h1">Staff Login</div>
-      <Link className="p-3 noUnderline" to="/home">
+      <Link className="p-3 noUnderline" to="/">
         <FontAwesomeIcon icon={["fas", "arrow-circle-left"]} /> Back To Home{" "}
       </Link>
       <div className="area">
@@ -70,7 +70,7 @@ const PLogin = () => {
   return (
     <div className="ctext">
       <div className="title_bar text-center bg-color text-white p-3 h1">Patient Login</div>
-      <Link className="p-3 noUnderline" to="/home">
+      <Link className="p-3 noUnderline" to="/">
         <FontAwesomeIcon icon={["fas", "arrow-circle-left"]} /> Back To Home{" "}
       </Link>
       <div className="area">
