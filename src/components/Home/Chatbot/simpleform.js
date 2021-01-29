@@ -7,11 +7,12 @@ const theme = {
   background: 'white',
   headerBgColor: 'rgb(59, 156, 253)',
   headerFontColor: '#fff',
-  headerFontSize: '15px',
+  headerFontSize: '25px',
   botBubbleColor: 'rgb(59, 156, 253)',
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
+  inputStyle:'lg',
 };
 
 class SimpleForm extends Component {
@@ -19,7 +20,8 @@ class SimpleForm extends Component {
       return (
         <ThemeProvider theme={theme}>
         <ChatBot
-        headerTitle="DocBot"
+        headerTitle="RAYS BOT"
+        bubbleStyle={{fontSize:'16px'}}
         floating="true"
         width="25%"
           steps={[
@@ -37,8 +39,13 @@ class SimpleForm extends Component {
               id:'Appoint',
               options: [
                 { value: 'Yes', label: 'Yes', trigger: '1' },
-                { value: 'No', label: 'No', trigger: 'book' },
+                { value: 'No', label: 'No', trigger: 'warning' },
               ],
+            },
+            {
+              id: 'warning',
+              message: 'Sorry, but currently we can only book your appointments 😊',
+              trigger: 'book',
             },
             {
               id: '1',
@@ -49,6 +56,12 @@ class SimpleForm extends Component {
               id: 'name',
               user: true,
               trigger: '3',
+              validator: (value) => {
+                if (!(value)) {
+                  return 'Enter the name';
+                }
+                return true
+                }
             },
             {
               id: '3',
@@ -91,7 +104,7 @@ class SimpleForm extends Component {
             {
               id: 'phone',
               user: true,
-              trigger: '7',
+              trigger: 'doctor-specialist',
               validator: (value) => {
                 if (isNaN(value)) {
                   return 'value must be a number';
@@ -100,8 +113,49 @@ class SimpleForm extends Component {
                 }
   
                 return true;
+             },
             },
-          },
+            {
+              id: 'doctor-specialist',
+              message: 'You are looking for a doctor in which department?',
+              trigger: 'specialist',
+            },
+            {
+              id: 'specialist',
+              options: [
+                { value: '  Cardiologist', label: 'Cardiologist', trigger: 'status' },
+                { value: '  ENT specialist', label: 'ENT specialist', trigger: 'status' },
+                { value: '  Dentist', label: 'Dentist', trigger: 'status' },
+                { value: '  Paediatrician', label: 'Paediatrician', trigger: 'status' },
+                { value: '  Neurologist', label: 'Neurologist', trigger: 'status' },
+                { value: '  General Practitioner ', label: 'General Practitioner ', trigger: 'status' },
+              ],
+            },
+            {
+              id: 'status',
+              message: 'Are you visiting for the first time, or is it a follow-up visit?',
+              trigger: 'patient-status',
+            },
+            {
+              id: 'patient-status',
+              options: [
+                { value: 'new', label: 'First Time', trigger: 'meeting' },
+                { value: 'existing', label: 'Follow-Up', trigger: 'meeting' },
+              ],
+            },
+            {
+              id: 'meeting',
+              message: 'When do you prefer to meet the doctor?',
+              trigger:'slot',
+            },
+            {
+              id: 'slot',
+              options: [
+                { value: 'next-available', label: 'Next available slot', trigger: '7' },
+                { value: 'within-7-days', label: 'Within next 7 days', trigger: '7' },
+                { value: 'within-15-days', label: 'Within next 15 days', trigger: '7' },
+              ],
+            },
             {
               id: '7',
               message: 'Great! Check out your summary',
@@ -137,6 +191,7 @@ class SimpleForm extends Component {
                 { value: 'gender', label: 'Gender', trigger: 'update-gender' },
                 { value: 'age', label: 'Age', trigger: 'update-age' },
                 { value: 'phone', label: 'Contact', trigger: 'update-phone' },
+                { value: 'Specialist', label: 'Specialist', trigger: 'update-specialist' },
               ],
             },
             {
@@ -157,6 +212,11 @@ class SimpleForm extends Component {
             {
               id: 'update-phone',
               update: 'phone',
+              trigger: '7',
+            },
+            {
+              id: 'update-specialist',
+              update: 'specialist',
               trigger: '7',
             },
 
