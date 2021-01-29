@@ -24,7 +24,7 @@ const TopComponent = () => {
   const vert_align = {
     top: 0,
     position: "fixed",
-    "z-index": "100",
+    zIndex: "100",
     transition: "all .5s ease",
     width: "100%",
   };
