@@ -3,6 +3,10 @@ import "./Forms.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Staff = (props) => {
+  var check;
+  if (props.msg === "") check = true;
+  else check = false;
+
   return (
     <>
       <Card id="cust-cont">
@@ -37,7 +41,7 @@ const Staff = (props) => {
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="radio" name="role" id="reception" value="receotion" defaultChecked onChange={props.handle_change} /> Receptionist
+                      <Input type="radio" name="role" id="reception" value="reception" defaultChecked onChange={props.handle_change} /> Receptionist
                     </Label>
                   </FormGroup>
                   <FormGroup check>
@@ -58,6 +62,14 @@ const Staff = (props) => {
           </Form>
         </CardBody>
       </Card>
+      {check ? (
+        <></>
+      ) : (
+        <Alert id="alert" color="danger">
+          <FontAwesomeIcon icon={["fas", "exclamation-triangle"]} />
+          {` ${props.msg}`}
+        </Alert>
+      )}
     </>
   );
 };

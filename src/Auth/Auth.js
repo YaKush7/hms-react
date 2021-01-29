@@ -34,9 +34,9 @@ const getHeader = () => {
   }
 };
 
-const verifyUser = () => {
+const verifyUser = (props) => {
   return axios
-    .get(API_TEST_URL + "user", { headers: getHeader() })
+    .get(API_TEST_URL + props.loc, { headers: getHeader() })
     .then((response) => {
       console.log(response);
       return response;
@@ -50,4 +50,4 @@ const verifyUser = () => {
     });
 };
 
-export { login, logout, register, verifyUser };
+export { login, logout, register, verifyUser, getHeader };

@@ -7,11 +7,14 @@ import "./Forms.css";
 //helper
 //staff
 const SLForm = () => {
+  const history = useHistory();
+
   const [state, setState] = useState({
     s_id: "",
     s_pass: "",
     role: "reception",
   });
+  const [msg, setMsg] = useState("");
 
   const handle_change = (props) => {
     setState((prevState) => ({ ...prevState, [props.target.name]: props.target.value }));
@@ -20,9 +23,24 @@ const SLForm = () => {
   const handle_submit = (props) => {
     props.preventDefault();
     console.log(state);
+
+    const send = {
+      id: state.s_id,
+      password: state.s_pass,
+      role: state.role,
+    };
+    login(send).then(
+      () => {
+        history.push("/staff_dashboard");
+      },
+      (err) => {
+        const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();
+        setMsg(errmsg.msg);
+      }
+    );
   };
 
-  return <Staff state={state} handle_change={handle_change} handle_submit={handle_submit} />;
+  return <Staff state={state} msg={msg} handle_change={handle_change} handle_submit={handle_submit} />;
 };
 
 //patient

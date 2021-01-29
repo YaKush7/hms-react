@@ -1,27 +1,32 @@
 import { SLForm, PLForm } from "./Login.helper";
 import "./Forms.css";
 import { useEffect, useState } from "react";
-import { verifyUser } from "../../Auth/Auth";
+import { getHeader, verifyUser } from "../../Auth/Auth";
 import { Redirect, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import loader from "../../assets/loader.svg";
 
-const Login = () => {
+const Login = (props) => {
   const [state, setState] = useState({
     msg: "",
     status: null,
   });
 
   useEffect(() => {
-    verifyUser().then((rep) => {
-      setState({ msg: rep.data.msg, status: rep.status });
-    });
-  }, []);
+    const temp = getHeader().role;
+    console.log(temp, props.loc);
+    if ((props.loc === "staff" && (temp === "admin" || temp === "reception" || temp === "doctor")) || props.loc === temp) {
+      verifyUser({ ...props }).then((rep) => {
+        setState({ msg: rep.data.msg, status: rep.status });
+      });
+    } else {
+      setState({ status: 401 });
+    }
+  }, [props]);
 
   if (state.status === 401 || state.status === 403) {
-    const URL = window.location.href.split("/")[3];
-    if (URL === "staff_login") {
+    if (props.loc === "staff") {
       return <SLogin />;
     } else {
       return <PLogin />;
@@ -30,11 +35,12 @@ const Login = () => {
 
   if (state.status === 200) {
     console.log("Redirecting");
-    return <Redirect to="/patient_dashboard" />;
+    if (props.loc === "staff") return <Redirect to="/staff_dashboard" />;
+    else return <Redirect to="/patient_dashboard" />;
   }
 
   if (state.status === -1) {
-    return <>{state.msg}</>;
+    return <Redirect to="/404_not_found" />;
   }
 
   return (
@@ -74,5 +80,4 @@ const PLogin = () => {
   );
 };
 
-//export default Login;
-export { Login, SLogin };
+export default Login;
