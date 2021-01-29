@@ -1,7 +1,7 @@
 import Home from "./components/Home/Home";
 import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
 //import Login from "./components/Login/Login";
-import Error from "./components/Error";
+import Error from "./components/Error/Error";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
 
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/patient_dashboard" render={() => <Dashboard loc="patient" data={null} />} />
         <Route path="/staff_dashboard" render={() => <Dashboard loc="staff" data={null} />} />
         <Route path="/404_not_found" component={Error} />
-        <Redirect exact to="/404_not_foud" />
+        <Redirect exact to="/404_not_found" />
       </Switch>
     </BrowserRouter>
   );
