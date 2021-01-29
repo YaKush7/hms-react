@@ -30,7 +30,7 @@ const TopComponent = () => {
   };
   return (
     <div id="fixed-top" style={vert_align} fixed="top">
-      <Navigation color="white" />
+      <Navigation color="black" />
     </div>
   );
 };

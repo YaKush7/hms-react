@@ -5,7 +5,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="contact" className="fix">
       <Container>
         <Row>
           <Col size="12" className="text-center title mb-5 mt-4">

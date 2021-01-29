@@ -25,20 +25,20 @@ const Carou = () => {
   };
 
   return (
-    <section id="home">
-    <Carousel activeIndex={active} next={next} previous={prev}>
-      <CarouselIndicators items={items} activeIndex={active} onClickHandler={goto} />
-      {items.map((item) => {
-        return (
-          <CarouselItem onExiting={() => settransition(true)} onExited={() => settransition(false)} key={item.src}>
-            <img src={item.src} alt={item.alt} className="cimage" />
-            <CarouselCaption captionHeader={item.head} captionText={item.text} />
-          </CarouselItem>
-        );
-      })}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={prev} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
+    <section id="home" className="fix">
+      <Carousel activeIndex={active} next={next} previous={prev}>
+        <CarouselIndicators items={items} activeIndex={active} onClickHandler={goto} />
+        {items.map((item) => {
+          return (
+            <CarouselItem onExiting={() => settransition(true)} onExited={() => settransition(false)} key={item.src}>
+              <img src={item.src} alt={item.alt} className="cimage" />
+              <CarouselCaption captionHeader={item.head} captionText={item.text} />
+            </CarouselItem>
+          );
+        })}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={prev} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      </Carousel>
     </section>
   );
 };

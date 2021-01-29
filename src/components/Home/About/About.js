@@ -8,7 +8,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="fix">
       <Container>
         <Row>
           <Col size="12" className="text-center title pt-4">

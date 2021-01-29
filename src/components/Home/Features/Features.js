@@ -4,9 +4,9 @@ import "./Features.css";
 
 const Features = () => {
   return (
-    <section id="features">
+    <section id="features" className="fix">
       <Container className="feat">
-        <Row className="mb-5 mt-4">
+        <Row className="mb-5">
           <Col size="12" className="text-center title pt-5">
             <h1>Features</h1>
             <hr />
