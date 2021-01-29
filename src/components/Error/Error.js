@@ -1,9 +1,8 @@
-import './Error.css';
+import "./Error.css";
 
-
-const error = () => {
-    return (
-      <>
+const Error = () => {
+  return (
+    <>
       <div>
         <meta charSet="utf-8" />
         <div id="notfound">
@@ -15,12 +14,14 @@ const error = () => {
             </div>
             <h1>oops!</h1>
             <h2>Error 404 : Page Not Found</h2>
-            <a className="noUnderline" href="/">Go To HomePage</a>
+            <a className="noUnderline" href="/">
+              Go To HomePage
+            </a>
           </div>
         </div>
       </div>
-        </>
-    );
-  };
+    </>
+  );
+};
 
-export default error;
+export default Error;

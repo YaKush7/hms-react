@@ -24,13 +24,13 @@ const TopComponent = () => {
   const vert_align = {
     top: 0,
     position: "fixed",
-    "z-index": "100",
+    zIndex: "100",
     transition: "all .5s ease",
     width: "100%",
   };
   return (
     <div id="fixed-top" style={vert_align} fixed="top">
-      <Navigation color="white" />
+      <Navigation color="black" />
     </div>
   );
 };
