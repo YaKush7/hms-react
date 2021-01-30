@@ -16,6 +16,7 @@ const login = (send) => {
 
 const logout = () => {
   localStorage.removeItem("user");
+  window.location.reload();
 };
 
 const register = (send) => {

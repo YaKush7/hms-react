@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { getHeader, verifyUser } from "../../Auth/Auth";
 import loader from "../../assets/loader.svg";
+import DashboardUI from './DashboardUI/DashboardUI';
 
 const Dashboard = (props) => {
   const [state, setState] = useState({
@@ -26,13 +27,10 @@ const Dashboard = (props) => {
   }, [props]);
 
   if (state.status === 200) {
+    const data = JSON.stringify(state.data, null, 2);
     return (
       <>
-        Logged in : {JSON.stringify(state, null, 1)}
-        <br />
-        From : {props.loc}
-        <br />
-        DATA : {JSON.stringify(state.data, null, 2)}
+        {DashboardUI(data)}
       </>
     );
   }
