@@ -3,9 +3,13 @@ import "./Forms.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Staff = (props) => {
-  var check;
-  if (props.msg === "") check = true;
-  else check = false;
+  var Echeck;
+  if (props.msg.errMsg === "") Echeck = true;
+  else Echeck = false;
+
+  var Lcheck;
+  if (props.msg.loadingMsg === "") Lcheck = true;
+  else Lcheck = false;
 
   return (
     <>
@@ -62,12 +66,20 @@ const Staff = (props) => {
           </Form>
         </CardBody>
       </Card>
-      {check ? (
+      {Echeck ? (
         <></>
       ) : (
         <Alert id="alert" color="danger">
           <FontAwesomeIcon icon={["fas", "exclamation-triangle"]} />
-          {` ${props.msg}`}
+          {` ${props.msg.errMsg}`}
+        </Alert>
+      )}
+      {Lcheck ? (
+        <></>
+      ) : (
+        <Alert id="alert" color="warning">
+          <FontAwesomeIcon icon={["fas", "exclamation-triangle"]} />
+          {` ${props.msg.loadingMsg}`}
         </Alert>
       )}
     </>
@@ -75,9 +87,13 @@ const Staff = (props) => {
 };
 
 const Patient = (props) => {
-  var check;
-  if (props.msg === "") check = true;
-  else check = false;
+  var Echeck;
+  if (props.msg.errMsg === "") Echeck = true;
+  else Echeck = false;
+
+  var Lcheck;
+  if (props.msg.loadingMsg === "") Lcheck = true;
+  else Lcheck = false;
 
   return (
     <>
@@ -110,12 +126,20 @@ const Patient = (props) => {
           </Form>
         </CardBody>
       </Card>
-      {check ? (
+      {Echeck ? (
         <></>
       ) : (
         <Alert id="alert" color="danger">
           <FontAwesomeIcon icon={["fas", "exclamation-triangle"]} />
-          {` ${props.msg}`}
+          {` ${props.msg.errMsg}`}
+        </Alert>
+      )}
+      {Lcheck ? (
+        <></>
+      ) : (
+        <Alert id="alert" color="warning">
+          <FontAwesomeIcon icon={["fas", "exclamation-triangle"]} />
+          {` ${props.msg.loadingMsg}`}
         </Alert>
       )}
     </>

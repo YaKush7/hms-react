@@ -14,7 +14,10 @@ const SLForm = () => {
     s_pass: "",
     role: "reception",
   });
-  const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState({
+    errMsg: "",
+    loadingMsg: "",
+  });
 
   const handle_change = (props) => {
     setState((prevState) => ({ ...prevState, [props.target.name]: props.target.value }));
@@ -29,13 +32,14 @@ const SLForm = () => {
       password: state.s_pass,
       role: state.role,
     };
+    setMsg({ errMsg: "", loadingMsg: "Please Wait" });
     login(send).then(
       () => {
         history.push("/staff_dashboard");
       },
       (err) => {
         const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();
-        setMsg(errmsg.msg);
+        setMsg({ errMsg: errmsg.msg, loadingMsg: "" });
       }
     );
   };
@@ -51,7 +55,10 @@ const PLForm = () => {
     p_id: "",
     p_pass: "",
   });
-  const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState({
+    errMsg: "",
+    loadingMsg: "",
+  });
 
   const handle_change = (props) => {
     setState((prevState) => ({ ...prevState, [props.target.name]: props.target.value }));
@@ -66,13 +73,14 @@ const PLForm = () => {
       password: state.p_pass,
       role: "patient",
     };
+    setMsg({ errMsg: "", loadingMsg: "Please Wait" });
     login(send).then(
       () => {
         history.push("/patient_dashboard");
       },
       (err) => {
         const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();
-        setMsg(errmsg.msg);
+        setMsg({ errMsg: errmsg.msg, loadingMsg: "" });
       }
     );
   };
