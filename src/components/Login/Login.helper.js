@@ -39,7 +39,8 @@ const SLForm = () => {
       },
       (err) => {
         const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();
-        setMsg({ errMsg: errmsg.msg, loadingMsg: "" });
+        if (errmsg.msg === undefined) setMsg({ errMsg: "Server Error", loadingMsg: "" });
+        else setMsg({ errMsg: errmsg.msg, loadingMsg: "" });
       }
     );
   };
@@ -80,7 +81,8 @@ const PLForm = () => {
       },
       (err) => {
         const errmsg = (err.response && err.response.data && err.response.data) || err.message || err.toString();
-        setMsg({ errMsg: errmsg.msg, loadingMsg: "" });
+        if (errmsg.msg === undefined) setMsg({ errMsg: "Server Error", loadingMsg: "" });
+        else setMsg({ errMsg: errmsg.msg, loadingMsg: "" });
       }
     );
   };
