@@ -4,7 +4,7 @@ import i3 from "./images/Ambulance.webp";
 import i4 from "./images/Medicines.webp";
 import i5 from "./images/prescription.webp";
 
-import Modals from "../Modals/Modals";
+//import Modals from "../Modals/Modals";
 import { Button } from "reactstrap";
 
 const items = [
