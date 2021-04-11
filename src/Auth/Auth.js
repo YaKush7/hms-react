@@ -51,4 +51,20 @@ const verifyUser = (props) => {
     });
 };
 
-export { login, logout, register, verifyUser, getHeader };
+const getData = () => {
+  return axios
+    .get(API_TEST_URL + "patientdata", { headers: getHeader() })
+    .then((response) => {
+      console.log(response);
+      return response;
+    })
+    .catch((err) => {
+      if (err.response) {
+        return { data: { msg: err.response.data.msg }, status: err.response.status };
+      } else {
+        return { data: { msg: "Connection Error" }, status: -1 };
+      }
+    });
+};
+
+export { login, logout, register, verifyUser, getHeader, getData };

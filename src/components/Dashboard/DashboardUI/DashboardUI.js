@@ -9,7 +9,7 @@ import Prescription from "./Prescription";
 import Profile from "./Profile";
 import Footer from "../../Footer/Footer";
 
-const DashboardUI = ({ data }) => {
+const DashboardUI = ({ data, loc }) => {
   const user = JSON.parse(data);
   return (
     <>
