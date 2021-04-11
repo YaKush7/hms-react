@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getData } from "../../../Auth/Auth";
 import loader from "../../../assets/loader.svg";
 import "./DashboardUI.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Prescription = () => {
   const [data, setData] = useState({
@@ -48,7 +49,11 @@ const PrescriptionView = (props) => {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>{item.prescription}</td>
+                    <td>
+                      <a href={item.prescription} style={{ textDecoration: "none" }}>
+                        <FontAwesomeIcon icon={["fas", "file-medical"]} /> Download
+                      </a>
+                    </td>
                     <td>{item.doc_name}</td>
                     <td>{item.date.slice(0, 10)}</td>
                   </tr>
