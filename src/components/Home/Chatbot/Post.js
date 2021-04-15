@@ -1,34 +1,48 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { appoint } from "../../../Auth/Auth";
 
 const Post = (props) => {
-    const [state, setState] = useState({ name: '', gender: '', age: '', phone: '', specialist: '', slot: '' });
+  const [state, setState] = useState({ name: "", gender: "", age: "", phone: "", specialist: "", slot: "" });
+  const [msg, setMsg] = useState({ msg: "" });
 
-    useEffect(() => {
-        const { steps } = props;
-        const { name, gender, age, phone, specialist, slot } = steps;
-        setState({ name, gender, age, phone, specialist, slot });
-    }, [props])
+  useEffect(() => {
+    const { steps } = props;
+    const { name, gender, age, phone, specialist, slot } = steps;
+    setState({ name, gender, age, phone, specialist, slot });
+  }, [props]);
 
-    const { name, gender, age, phone, specialist, slot } = state;
-    if (name.value != null) {
-        console.log("Name: " + name.value);
-        console.log("Gender: " + gender.value);
-        console.log("Age: " + age.value);
-        console.log("Phone Number: " + phone.value);
-        console.log("Doctor: " + specialist.value);
-        console.log("Slot: " + slot.value);
-    }
+  const { name, gender, age, phone, specialist, slot } = state;
+  if (name.value != null) {
+    console.log("Name: " + name.value);
+    console.log("Gender: " + gender.value);
+    console.log("Age: " + age.value);
+    console.log("Phone Number: " + phone.value);
+    console.log("Doctor: " + specialist.value);
+    console.log("Slot: " + slot.value);
 
-    return (null);
-}
+    const data = {
+      name: name.value,
+      gender: gender.value,
+      age: age.value,
+      phone: phone.value,
+      specialist: specialist.value,
+      slot: slot.value,
+    };
+
+    setMsg(appoint(data));
+    console.log(msg);
+  }
+
+  return null;
+};
 
 Post.propTypes = {
-    steps: PropTypes.object,
+  steps: PropTypes.object,
 };
 
 Post.defaultProps = {
-    steps: undefined,
+  steps: undefined,
 };
 
 export default Post;

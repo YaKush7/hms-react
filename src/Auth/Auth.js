@@ -67,4 +67,16 @@ const getData = () => {
     });
 };
 
-export { login, logout, register, verifyUser, getHeader, getData };
+const appoint = (send) => {
+  return axios
+    .post(API_TEST_URL + "appointment", send)
+    .then((response) => {
+      console.log(response);
+      return response.data;
+    })
+    .catch((err) => {
+      return err.response.data;
+    });
+};
+
+export { login, logout, register, verifyUser, getHeader, getData, appoint };
