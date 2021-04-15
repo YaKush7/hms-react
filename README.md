@@ -4,7 +4,7 @@ Hospital Management System (REACT)
 
 ## Modules :electric_plug:
 - Pages
-- Authentication (uses API from [hms-node](https://github.com/Yash227/hms-node))
+- Authentication (uses API from [Backend part of HMS](https://github.com/Yash227/hms-node))
 
 ## Components :page_with_curl:
 - [x] Home (Home Page)
