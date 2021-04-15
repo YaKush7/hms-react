@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 import Review from './review';
+import Post from './Post';
 
 const theme = {
   background: 'white',
@@ -223,6 +224,11 @@ class SimpleForm extends Component {
             {
               id: 'end-message',
               message: 'Thanks! Your request has been saved. We will contact you soon!',
+              trigger: 'submit',
+            },
+            {
+              id: 'submit',
+              component: <Post />,
               end: true,
             },
           ]}
