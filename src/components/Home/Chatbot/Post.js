@@ -4,7 +4,6 @@ import { appoint } from "../../../Auth/Auth";
 
 const Post = (props) => {
   const [state, setState] = useState({ name: "", gender: "", age: "", phone: "", specialist: "", slot: "" });
-  const [msg, setMsg] = useState({ msg: "" });
 
   useEffect(() => {
     const { steps } = props;
@@ -30,7 +29,7 @@ const Post = (props) => {
       slot: slot.value,
     };
 
-    setMsg(appoint(data));
+    const msg = appoint(data);
     console.log(msg);
   }
 
