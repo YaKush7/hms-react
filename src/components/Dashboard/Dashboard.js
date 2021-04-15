@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { getHeader, verifyUser } from "../../Auth/Auth";
 import loader from "../../assets/loader.svg";
+import DashboardUI from "./DashboardUI/DashboardUI";
 
 const Dashboard = (props) => {
   const [state, setState] = useState({
@@ -14,10 +15,9 @@ const Dashboard = (props) => {
 
   useEffect(() => {
     const temp = getHeader().role;
-    console.log(temp, props.loc);
+    //console.log(temp, props.loc);
     if ((props.loc === "staff" && (temp === "admin" || temp === "reception" || temp === "doctor")) || props.loc === temp) {
       verifyUser({ ...props }).then((response) => {
-        console.log(response);
         setState({ uid: response.data.uid, urole: response.data.urole, msg: response.data.msg, status: response.status, data: response.data.data._doc });
       });
     } else {
@@ -26,15 +26,8 @@ const Dashboard = (props) => {
   }, [props]);
 
   if (state.status === 200) {
-    return (
-      <>
-        Logged in : {JSON.stringify(state, null, 1)}
-        <br />
-        From : {props.loc}
-        <br />
-        DATA : {JSON.stringify(state.data, null, 2)}
-      </>
-    );
+    const data = JSON.stringify(state.data, null, 2);
+    return <DashboardUI data={data} />;
   }
 
   if (state.status === 401 || state.status === 403) {

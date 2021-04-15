@@ -4,7 +4,7 @@ import i3 from "./images/Ambulance.webp";
 import i4 from "./images/Medicines.webp";
 import i5 from "./images/prescription.webp";
 
-import Modals from "../Modals/Modals";
+//import Modals from "../Modals/Modals";
 import { Button } from "reactstrap";
 
 const items = [
@@ -18,7 +18,12 @@ const items = [
     src: i2,
     alt: "doctors",
     head: "Staff/Patient Login Portal",
-    text: <Modals buttonLabel="Click Here!" boutline={false} bcolor="primary" cname="mt-2" />,
+    //text: <Modals buttonLabel="Click Here!" boutline={false} bcolor="primary" cname="mt-2" />,
+    text: (
+      <Button color="primary" className="mt-2">
+        Choose Your Role!
+      </Button>
+    ),
   },
   {
     src: i3,
