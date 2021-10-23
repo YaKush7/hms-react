@@ -4,8 +4,12 @@ import { useEffect, useState } from "react";
 import { getHeader, verifyUser } from "../../Auth/Auth";
 import { Redirect, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import loader from "../../assets/loader.svg";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fab, fas);
 
 const Login = (props) => {
   const [state, setState] = useState({
@@ -40,6 +44,7 @@ const Login = (props) => {
   }
 
   if (state.status === -1) {
+    console.log("here");
     return <Redirect to="/404_not_found" />;
   }
 

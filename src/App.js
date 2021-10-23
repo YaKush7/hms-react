@@ -14,7 +14,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/staff_login" render={() => <Login loc="staff" />} />
-          <Route path="/patient_login" render={() => <Login loc="patient" />} />
+          <Route exact path="/patient_login" render={() => <Login loc="patient" />} />
           <Route path="/patient_dashboard" render={() => <Dashboard loc="patient" data={null} />} />
           <Route path="/staff_dashboard" render={() => <Dashboard loc="staff" data={null} />} />
           <Route path="/404_not_found" component={Error} />

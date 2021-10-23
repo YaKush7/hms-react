@@ -3,6 +3,12 @@ import { Redirect } from "react-router-dom";
 import { getHeader, verifyUser } from "../../Auth/Auth";
 import loader from "../../assets/loader.svg";
 import DashboardUI from "./DashboardUI/DashboardUI";
+import DashboardUIStaff from "./DashboardUI/DashboardUIStaff";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fab, fas);
 
 const Dashboard = (props) => {
   const [state, setState] = useState({
@@ -27,7 +33,11 @@ const Dashboard = (props) => {
 
   if (state.status === 200) {
     const data = JSON.stringify(state.data, null, 2);
-    return <DashboardUI data={data} />;
+    if (props.loc === "staff") {
+      return <DashboardUIStaff data={data} />;
+    } else {
+      return <DashboardUI data={data} />;
+    }
   }
 
   if (state.status === 401 || state.status === 403) {

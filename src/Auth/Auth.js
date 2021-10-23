@@ -67,6 +67,22 @@ const getData = () => {
     });
 };
 
+const setData = (send) => {
+  return axios
+    .get(API_TEST_URL + "setpatientdata", { headers: getHeader(), params: send })
+    .then((response) => {
+      console.log(response);
+      return response;
+    })
+    .catch((err) => {
+      if (err.response) {
+        return { data: { msg: err.response.data.msg }, status: err.response.status };
+      } else {
+        return { data: { msg: "Connection Error" }, status: -1 };
+      }
+    });
+};
+
 const appoint = (send) => {
   return axios
     .post(API_TEST_URL + "appointment", send)
@@ -79,4 +95,4 @@ const appoint = (send) => {
     });
 };
 
-export { login, logout, register, verifyUser, getHeader, getData, appoint };
+export { login, logout, register, verifyUser, getHeader, getData, appoint, setData };
