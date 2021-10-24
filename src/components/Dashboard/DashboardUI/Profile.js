@@ -6,7 +6,7 @@ const Profile = ({ user }) => {
       <div className="profile-tab">
         <div className="row">
           <div className="col-md-6">
-            <label>Patient Id</label>
+            <label>{user.role === "patient" ? <>Patient ID</> : user.role === "admin" ? <>Admin ID</> : user.role === "doctor" ? <>Doctor ID</> : <>Reception ID</>}</label>
           </div>
           <div className="col-md-6">
             <p>{user.id}</p>
